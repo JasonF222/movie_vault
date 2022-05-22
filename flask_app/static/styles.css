@@ -1,0 +1,524 @@
+/* CSS RESET */
+* {
+    margin: 0px;
+    padding: 0px;
+    /* Font CSS */
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Kanit', sans-serif;
+    /* outline: 1px solid red; */
+}
+
+
+/* .boxGrow {
+    transform: scale(1.2);
+    transition: 0.5s;
+} */
+
+
+
+/* GENERIC CSS */
+
+
+/* Box Shadows */
+
+.box-shadow {
+    box-shadow: 0px 0px 5px 5px black;
+}
+
+.box-shadow2 {
+    box-shadow: 0px 0px 15px 15px whitesmoke;
+}
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+/* My Movie Vault CSS */
+
+.movieVault {
+    color: white; 
+    font-size: 40pt;
+    transition: 0.7s;
+}
+
+.movieVault:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+
+/* Background Gradients */
+
+.background {
+    background-image: linear-gradient(to top, whitesmoke, blanchedalmond, peachpuff);
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.background:hover {
+    background-image: linear-gradient(to top, whitesmoke, blanchedalmond, peachpuff);
+    border-radius: 10px;
+    transform: scale(1.1);
+    transition: 0.7s;
+    box-shadow: 0px 0px 15px 15px blanchedalmond;
+}
+
+
+/* LOGIN/REGISTER PAGE CSS */
+
+/* Login Button */
+
+.loginBig {
+    font-size: 48pt;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    background: none;
+}
+
+.loginBig:hover {
+    font-size: 52pt;
+    transition: 0.3s;
+    color: aqua;
+    text-decoration: none;
+    background: none;
+    border-bottom: 2px solid aqua;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Register Button */
+
+.regBig {
+    font-size: 48pt;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    background: none;
+}
+
+.regBig:hover {
+    font-size: 52pt;
+    transition: 0.3s;
+    color: lightgreen;
+    text-decoration: none;
+    background: none;
+    border-bottom: 2px solid lightgreen;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Register Button Index */
+
+.registerbtn {
+    font-size: 14pt;
+    transition: 0.3s;
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+
+.registerbtn:hover {
+    font-size: 16pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Login Button Index */
+
+.loginbtn {
+    font-size: 14pt;
+    
+    transition: 0.3s;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: black;
+}
+
+.loginbtn:hover {
+    font-size: 16pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+    background: none;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Text Field CSS */
+
+.inputF:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+
+/* Navbar CSS */
+
+.navbar {
+    /* background-image: linear-gradient(to bottom, black, rgb(86, 90, 95), black); */
+    background-image: linear-gradient(to top, black,   blanchedalmond);
+    transition: 0.5s;
+}
+
+/* BUTTONS */
+
+/* Logout Nav Button */
+
+.navbtn {
+    font-size: 14pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.navbtn:hover {
+    font-size: 18pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: lightcoral;
+    /* border-bottom: 2px solid lightcoral; */
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Dashboard Nav Button */
+
+.navbtndash {
+    font-size: 14pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.navbtndash:hover {
+    font-size: 18pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: lightskyblue;
+    border-bottom: 2px solid lightskyblue;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.randombtndash {
+    font-size: 14pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.randombtndash:hover {
+    font-size: 18pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: lightskyblue;
+    /* border-bottom: 2px solid lightskyblue; */
+    border-radius: 10px;
+    padding: 3px;
+}
+
+
+/* My Favorites Nav Button */
+
+.navbtnfav {
+    font-size: 14pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.navbtnfav:hover {
+    font-size: 16pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: yellow;
+    border-bottom: 2px solid yellow;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* My Queue Nav Button */
+
+.navbtnqueue {
+    font-size: 14pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    background: none;
+}
+
+.navbtnqueue:hover {
+    font-size: 16pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: rgb(0, 255, 0);
+    background: none;
+    border-bottom: 2px solid rgb(0, 255, 0);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* My Favorites Bottom Button */
+
+.botbtnfav {
+    font-size: 28pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.botbtnfav:hover {
+    font-size: 30pt;
+    transition: 0.3s;
+    color: yellow;
+    text-decoration: none;
+    border-bottom: 2px solid yellow;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* My Queue Bottom Button */
+
+.botbtnqueue {
+    font-size: 28pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.botbtnqueue:hover {
+    font-size: 30pt;
+    transition: 0.3s;
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+    border-bottom: 2px solid rgb(0, 255, 0);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* My Dashboard Bottom Button */
+
+.botbtndash {
+    font-size: 28pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.botbtndash:hover {
+    font-size: 30pt;
+    transition: 0.3s;
+    color: lightskyblue;
+    text-decoration: none;
+    border-bottom: 2px solid lightskyblue;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Get New Movies Big Bottom Button */
+
+.botbtnbig {
+    font-size: 40pt;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.botbtnbig:hover {
+    font-size: 44pt;
+    transition: 0.3s;
+    color: aqua;
+    text-decoration: none;
+    border-bottom: 2px solid aqua;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* View Movie Card listbtn */
+    
+.listbtn {
+    font-size: 16pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.listbtn:hover {
+    font-size: 20pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: orange;
+    border-bottom: 2px solid orange;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+
+/* Add to Queue Movie Card listbtn */
+
+.listbtnqueue {
+    font-size: 16pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    background: none;
+}
+
+.listbtnqueue:hover {
+    font-size: 20pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: rgb(0, 255, 0);
+    background: none;
+    border-bottom: 2px solid rgb(0, 255, 0);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Remove From Favorites Card listbtn */
+
+.listbtnfav {
+    font-size: 18pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.listbtnfav:hover {
+    font-size: 22pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: red;
+    border-bottom: 2px solid red;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Add to Favorites Movie Card listbtn */
+
+.addbtnfav {
+    font-size: 16pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    background: none;
+}
+
+.addbtnfav:hover {
+    font-size: 20pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: yellow;
+    background: none;
+    border-bottom: 2px solid yellow;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Remove From Queue Card listbtn */
+
+.removebtnqueue {
+    font-size: 18pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.removebtnqueue:hover {
+    font-size: 22pt;
+    transition: 0.3s;
+    text-decoration: none;
+    color: red;
+    border-bottom: 2px solid red;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* To Top Button */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    padding: 5px;
+    transform: scale(1.0);
+    transition: 0.3s;
+}
+
+#myBtn:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+
+
+/* DASHBOARD CSS */
+
+/* Profile Pic */
+
+.dashPic:hover {
+    height: 300px;
+    transition: 0.3s;
+}
+
+.dashPic {
+    height: 250px;
+    transition: 0.3s;
+}
+
+.profileImg {
+    border-radius: 25%;
+    /* box-shadow: 0px 0px 10px 10px whitesmoke; */
+}
+
+.profileImg:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    border-radius: 25%;
+    box-shadow: 0px 0px 10px 10px blanchedalmond;
+}
+
+
+/* MOVIE CARD CSS */
+
+
+.movieTitle {
+    height: 275px;
+    width: 200px;
+    box-shadow: 0px 0px 5px 5px whitesmoke;
+}
+
+.movieTitle:hover {
+    height: 325px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.movieTitle {
+    height: 275px;
+    width: 200px;
+    transition: 0.3s;
+}
+.cardHover {
+    transform: scale(1.0);
+    transition: 0.3s;
+}
+
+.cardHover:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
