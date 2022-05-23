@@ -6,7 +6,7 @@ from flask_app.models.favorite_model import Favorite
 from flask_app.models.user_model import User
 from flask_app.models.queue_model import Queue
 import os
-print( os.environ.get("movie_api_key") )
+
 
 # # for loop to iterate dict and object #
 # for movie in data['results']:

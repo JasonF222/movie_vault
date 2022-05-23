@@ -11,4 +11,3 @@ app.secret_key = "Movie Vault"
 DATABASE = 'movie_vault'
 
 import os
-print( os.environ.get("movie_api_key") )

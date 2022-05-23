@@ -172,6 +172,23 @@ body {
 
 /* BUTTONS */
 
+/* Sort Buttons */
+
+.sortbtn {
+    font-size: 16pt;
+    transition: 0.3s;
+}
+
+.sortbtn:hover {
+    font-size: 18pt;
+    transform: scale(1.05);
+    transition: 0.3s;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+
 /* Logout Nav Button */
 
 .navbtn {

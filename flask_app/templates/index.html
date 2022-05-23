@@ -21,14 +21,14 @@
     </div>
 
 
-    <!-- Flash messages (maybe move over each field?)
+    <!-- Flash messages (maybe move over each field?) -->
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
                 <p class="text-danger text-center fs-5">{{ message }}</p>
             {% endfor %}
         {% endif %}
-    {% endwith %} -->
+    {% endwith %}
 
 
 

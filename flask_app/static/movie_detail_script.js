@@ -7,6 +7,7 @@ async function getMovieDetail() {
     // const results = response.results //
     //de-structuring technique //
     const movie = response
+    let releaseYr = dateToYear(movie.release_date) 
     console.log(response);
     console.log(movie.id);
     movieDetail.innerHTML +=
@@ -20,7 +21,7 @@ async function getMovieDetail() {
         <div class="midcol" style="flex: 3;">
             <div class="top d-flex justify-content-between">
             <h2 class="text-light text-wrap" style="width: 25rem;">${movie.title}</h2>
-            <h4 class="text-light">${movie.release_date}</h4>
+            <h4 class="text-light">${releaseYr}</h4>
             <h4 class="text-light">Rating: <span class="text-warning">${movie.vote_average}</span></h4>
         </div>
         <h3 class="text-light mt-3">Overview</h3>
@@ -32,7 +33,31 @@ async function getMovieDetail() {
 }
 getMovieDetail();
 
+// Converting API date index into Month Name + Year //
 
+const monthInd = {
+    '01': 'January',
+    '02': 'February',
+    '03': 'March',
+    '04': 'April',
+    '05': 'May',
+    '06': 'June',
+    '07': 'July',
+    '08': 'August',
+    '09': 'September',
+    '10': 'October',
+    '11': 'November',
+    '12': 'December',
+
+}
+function dateToYear(str){
+    let newStr ="";
+    let arr = str.split('-');
+    console.log(arr);
+    newStr += monthInd[String(arr[1])] + " ";   
+    newStr += arr[0];
+    return newStr    
+}
 
 
 // below is old code to add to fav/queue //

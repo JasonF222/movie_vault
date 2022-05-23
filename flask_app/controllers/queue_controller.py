@@ -4,7 +4,7 @@ from flask_app import app
 from flask import jsonify, session, redirect, request, flash, render_template
 from flask_app.models.queue_model import Queue
 import os
-print( os.environ.get("movie_api_key") )
+
 
 # approute to add to queue #
 @app.route('/add_queue', methods=['POST'])
@@ -26,7 +26,23 @@ def add_queue():
 def show_queue():
     if not 'user_id' in session:
         return redirect('/')
-    queues = Queue.get_all_queued()
+    queues = Queue.get_all_queued({'user_id': session['user_id']})
+    return render_template('queue_movie.html', queues = queues)
+
+# approute to view queue #
+@app.route('/queue_list/a-z')
+def show_queue_ascend():
+    if not 'user_id' in session:
+        return redirect('/')
+    queues = Queue.get_all_queued_ascend({'user_id': session['user_id']})
+    return render_template('queue_movie.html', queues = queues)
+
+# approute to view queue #
+@app.route('/queue_list/z-a')
+def show_queue_descend():
+    if not 'user_id' in session:
+        return redirect('/')
+    queues = Queue.get_all_queued_descend({'user_id': session['user_id']})
     return render_template('queue_movie.html', queues = queues)
 
 

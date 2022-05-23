@@ -5,7 +5,7 @@ from flask import jsonify, session, redirect, request, flash, render_template
 from flask_app.models.favorite_model import Favorite
 
 import os
-print( os.environ.get("movie_api_key") )
+
 
 # approute to add to favorites #
 @app.route('/add_favorite', methods=['POST'])
@@ -27,7 +27,25 @@ def add_favorite():
 def show_favorite():
     if not 'user_id' in session:
         return redirect('/')
-    favorites = Favorite.get_all_favs()
+    favorites = Favorite.get_all_favs({'user_id': session['user_id']})
+    print(favorites)
+    return render_template('favorite_movie.html', favorites = favorites)
+
+# approute to view favorites A-Z #
+@app.route('/favorite_list/a-z')
+def sort_fav_asc():
+    if not 'user_id' in session:
+        return redirect('/')
+    favorites = Favorite.get_all_favs_ascend({'user_id': session['user_id']})
+    print(favorites)
+    return render_template('favorite_movie.html', favorites = favorites)
+
+# approute to view favorites Z-A #
+@app.route('/favorite_list/z-a')
+def sort_fav_desc():
+    if not 'user_id' in session:
+        return redirect('/')
+    favorites = Favorite.get_all_favs_descend({'user_id': session['user_id']})
     print(favorites)
     return render_template('favorite_movie.html', favorites = favorites)
 

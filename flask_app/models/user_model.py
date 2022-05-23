@@ -8,7 +8,7 @@ from flask import flash, redirect, request
 from flask_app import DATABASE
 
 import os
-print( os.environ.get("movie_api_key") )
+
 
 # allows Regular Expression for Validations #
 import re

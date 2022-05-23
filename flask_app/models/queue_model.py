@@ -5,7 +5,7 @@ from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash, redirect, request
 
 import os
-print( os.environ.get("movie_api_key") )
+
 
 # allows use of global DATABASE variable #
 from flask_app import DATABASE
@@ -44,13 +44,33 @@ class Queue:
 
     # classmethod to get all queued movies #
     @classmethod
-    def get_all_queued(cls):
-        query = 'SELECT * FROM queues;'
-        result = connectToMySQL(DATABASE).query_db(query)
-        data = []
+    def get_all_queued(cls, data):
+        query = 'SELECT * FROM queues WHERE user_id = %(user_id)s ORDER BY id DESC;'
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        userQueue = []
         for row in result:
-            data.append(cls(row))
-        return data
+            userQueue.append(cls(row))
+        return userQueue
+
+    # classmethod to get all queued movies A-Z #
+    @classmethod
+    def get_all_queued_ascend(cls, data):
+        query = 'SELECT * FROM queues WHERE user_id = %(user_id)s ORDER BY title;'
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        userQueue = []
+        for row in result:
+            userQueue.append(cls(row))
+        return userQueue
+
+    # classmethod to get all queued movies Z-A #
+    @classmethod
+    def get_all_queued_descend(cls, data):
+        query = 'SELECT * FROM queues WHERE user_id = %(user_id)s ORDER BY title DESC;'
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        userQueue = []
+        for row in result:
+            userQueue.append(cls(row))
+        return userQueue
 
     #class method to remove a movie from queue #
     @classmethod

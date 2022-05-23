@@ -5,7 +5,7 @@ from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash, redirect, request
 
 import os
-print( os.environ.get("movie_api_key") )
+
 
 # allows use of global DATABASE variable #
 from flask_app import DATABASE
@@ -52,13 +52,33 @@ class Favorite:
 
     # classmethod to get all favorites #
     @classmethod
-    def get_all_favs(cls):
-        query = 'SELECT * FROM favorites;'
-        result = connectToMySQL(DATABASE).query_db(query)
-        data = []
+    def get_all_favs(cls, data):
+        query = 'SELECT * FROM favorites WHERE user_id = %(user_id)s ORDER BY id DESC;'
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        userFav = []
         for row in result:
-            data.append(cls(row))
-        return data
+            userFav.append(cls(row))
+        return userFav
+
+    # classmethod to get all favorites A-Z #
+    @classmethod
+    def get_all_favs_ascend(cls, data):
+        query = 'SELECT * FROM favorites WHERE user_id = %(user_id)s ORDER BY title;'
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        userFav = []
+        for row in result:
+            userFav.append(cls(row))
+        return userFav
+
+    # classmethod to get all favorites Z-A #
+    @classmethod
+    def get_all_favs_descend(cls, data):
+        query = 'SELECT * FROM favorites WHERE user_id = %(user_id)s ORDER BY title DESC;'
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        userFav = []
+        for row in result:
+            userFav.append(cls(row))
+        return userFav
 
     #class method to remove a favorite #
     @classmethod

@@ -10,7 +10,7 @@ from flask_app.models.favorite_model import Favorite
 from flask_app.models.queue_model import Queue
 
 import os
-print( os.environ.get("movie_api_key") )
+
 
 # Import our Bcrypt for password hashing #
 from flask_bcrypt import Bcrypt
