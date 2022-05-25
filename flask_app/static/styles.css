@@ -167,7 +167,7 @@ body {
 .navbar {
     /* background-image: linear-gradient(to bottom, black, rgb(86, 90, 95), black); */
     background-image: linear-gradient(to top, black,   blanchedalmond);
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 
 /* BUTTONS */
@@ -176,13 +176,13 @@ body {
 
 .sortbtn {
     font-size: 16pt;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .sortbtn:hover {
     font-size: 18pt;
     transform: scale(1.05);
-    transition: 0.3s;
+    transition: 0.3s ease;
     border-bottom: 2px solid white;
     border-radius: 10px;
     padding: 3px;

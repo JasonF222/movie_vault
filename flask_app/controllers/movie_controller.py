@@ -8,18 +8,6 @@ from flask_app.models.queue_model import Queue
 import os
 
 
-# # for loop to iterate dict and object #
-# for movie in data['results']:
-#     print(movie['id'])
-#     print(movie['poster_path'])
-#     print(movie['title'])
-#     print(movie['release_date'])
-#     print(movie['vote_average'])
-#     print(movie['overview'])
-
-# this is the front half of the poster path url to use in template rendering #
-# https://image.tmdb.org/t/p/w500{POSTER PATH}
-
 # create controller and have js fetch the data by calling controller app.route #
 @app.route('/api/show_movie')
 def api_show_movie():

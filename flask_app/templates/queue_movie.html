@@ -29,10 +29,10 @@
     </div>
 
     <h1 class="text-light text-center mt-5 mb-3">My List of Queued Movies:</h1>
-    <div class="sort mb-2 justify-content-center d-flex gap-4">
-        <a href="/queue_list/a-z" class="text-decoration-none sortbtn">Sort A-Z</a>
-        <a href="/queue_list" class="text-decoration-none sortbtn">Sort By Most Recent</a>
-        <a href="/queue_list/z-a" class="text-decoration-none sortbtn">Sort Z-A</a>
+    <div class="sort mb-2 justify-content-center d-flex gap-3">
+        <a href="/queue_list/a-z" class="text-decoration-none sortbtn mt-2">Sort A-Z</a>
+        <span class="text-light fs-2"> | </span><a href="/queue_list" class="text-decoration-none sortbtn mt-2">Sort By Most Recent</a> <span class="text-light fs-2"> | </span>
+        <a href="/queue_list/z-a" class="text-decoration-none sortbtn mt-2">Sort Z-A</a>
     </div>
 
 <div class="queuelist me-5">
@@ -41,7 +41,7 @@
         <div class="titleList d-flex justify-content-center text-center">
             <li class="text-light fs-3 mt-2 text-decoration-underline">{{ one.title }} </li>
         </div>
-        <div class="d-flex justify-content-center align-baseline gap-2 mb-2">
+        <div class="d-flex justify-content-center align-baseline gap-3 mb-2">
         <li>  
             <form id="myForm" action="/add_to_favorite" method="post">
                 <input type="hidden" name="movie_id" value="{{ one.movie_id }}">
